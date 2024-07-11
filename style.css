@@ -1,167 +1,140 @@
-/* Importa o arquivo de reset CSS para remover estilos padrão do navegador */
-@import url('./reset.css');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap");
 
-/* Definindo a fonte padrão e o layout da página */
+* {
+	font-family: "Roboto", sans-serif;
+	box-sizing: border-box;
+}
+
 body {
-    font-family: 'Roboto', sans-serif; /* Define a fonte padrão para 'Roboto' */
-    background-color: #e2e2e2; /* Cor de fundo cinza claro */
-    margin: 0; /* Remove a margem padrão */
-    padding: 0; /* Remove o padding padrão */
-    display: flex; /* Usa flexbox para layout */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: flex-start; /* Alinha o conteúdo ao topo verticalmente */
-    height: 100vh; /* Altura total da viewport */
-    flex-direction: column; /* Organiza os filhos em coluna */
+	background-color: #e2e2e2;
 }
 
-.header__container {
-    width: 100%;
-    background-color: hsl(0, 0%, 100%); /* Fundo branco */
-    padding: 35px 0; /* Aumenta o espaçamento vertical para aumentar a altura */
-    display: flex;
-    justify-content: center;
-    position: fixed; /* Mantém o cabeçalho fixo no topo */
-    top: 0; /* Posiciona no topo */
-    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
-}
-
-/* Estilos para o conteúdo do cabeçalho */
 .header__content {
-    max-width: 1200px; /* Largura máxima do conteúdo */
-    width: 90%; /* Largura relativa ao contêiner */
-    display: flex; /* Usa flexbox para layout */
-    justify-content: space-between; /* Espaça os itens igualmente */
-    align-items: center; /* Alinha os itens ao centro */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    flex-direction: row; /* Garante que os itens estejam na mesma linha */
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 70px;
+	color: #3b5bdb;
+	background-color: white;
 }
 
-/* Estilos para o título do cabeçalho */
 .header__title {
-    color: #3d5ddb; /* Cor azul */
-    font-size: 25px; /* Tamanho da fonte */
-    margin: 0; /* Remove a margem padrão */
-    white-space: nowrap; /* Garante que o texto não quebre */
-    font-weight: 590; /* Engrossa a fonte */
+	font-size: 25px;
+	font-weight: bold;
+	font-family: "Poppins", sans-serif; /* Altera a fonte para Poppins */
 }
 
 .header__input--search {
-    width: 40%; /* Largura do campo de busca */
-    padding: 10px; /* Espaçamento interno */
-    border: none; /* Remove a borda padrão */
-    border-radius: 5px; /* Bordas arredondadas */
-    background-color: #ebebeb; /* Cor de fundo cinza claro */
+	width: 500px;
+	height: 40px;
+	padding: 15px;
 }
 
-/* Contém o formulário para adicionar tarefas e a lista de tarefas */
+input,
+select,
+input:focus,
+select:focus {
+	background-color: #ebebeb;
+	border: none;
+	outline: none;
+	border-radius: 7.5px;
+	color: #757575;
+}
+
 .main__container {
-    width: 100%;
-    max-width: 1200px; /* Largura máxima do contêiner principal */
-    background-color: white; /* Cor de fundo branca */
-    padding: 20px;
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra do contêiner */
-    margin-top: 80px; /* Ajuste para evitar sobreposição do cabeçalho fixo */
-    z-index: 1; /* Posiciona o contêiner acima de outros elementos */
-    position: relative; /* Para permitir o uso de z-index */
-    display: flex; /* Usa flexbox para layout */
-    justify-content: space-between; /* Espaça os itens igualmente */
-    min-height: 600px; /* Define a altura mínima do contêiner */
+	margin-top: 30px;
 }
 
 .form__container {
-    width: 40%; /* Largura do formulário */
+	background-color: white;
+	padding: 40px;
+	width: 810px;
+	margin: 0 auto;
+	border-radius: 10px;
 }
 
-.form__title {
-    color: #3b5bdb; /* Cor azul do título */
-    margin-bottom: 10px; /* Espaçamento inferior */
-}
-
-.form__input-container {
-    display: flex; /* Usa flexbox para layout */
-    flex-direction: column; /* Organiza os filhos em coluna */
-    gap: 10px; /* Espaçamento entre os elementos */
-    margin-bottom: 10px; /* Espaçamento inferior */
-}
-
-.input__box {
-    width: 100%; /* Largura total dos inputs */
-    padding: 10px; /* Espaçamento interno */
-    border: 1px solid #ccc; /* Borda cinza clara */
-    border-radius: 5px; /* Bordas arredondadas */
-    background-color: #ebebeb; /* Cor de fundo cinza claro */
+h2 {
+	font-size: 15px;
+	padding-bottom: 20px;
 }
 
 .form__button--add-task {
-    width: 100%; /* Largura total do botão */
-    padding: 10px; /* Espaçamento interno */
-    border: none; /* Remove a borda padrão */
-    border-radius: 5px; /* Bordas arredondadas */
-    background-color: #3b5bdb; /* Cor de fundo azul */
-    color: white; /* Cor do texto branco */
-    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+	height: 50px;
+	width: 750px;
+	color: white;
+	background-color: #3b5bdb;
+	border: none;
+	border-radius: 7.5px;
+	font-size: 15px;
 }
 
-.form__button--add-task:hover {
-    background-color: #2a46b0; /* Cor de fundo azul mais escura ao passar o mouse */
+.form__input-container {
+	padding-bottom: 20px;
+	width: 750px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.form__input--text {
+	width: 435px;
+	height: 40px;
+	padding-left: 10px;
+}
+
+.form__input--priority {
+	width: 265px;
+	height: 40px;
+	padding-left: 10px;
 }
 
 .tasks__container {
-    width: 55%; /* Largura da lista de tarefas */
-    margin-top: 20px; /* Espaçamento superior */
-}
-
-.tasks__container h2 {
-    color: #3b5bdb; /* Cor azul do título */
-    margin-bottom: 10px; /* Espaçamento inferior */
-}
-
-.tasks__list {
-    list-style-type: none; /* Remove o estilo padrão da lista */
-    padding: 0; /* Remove o padding padrão */
-    margin: 0; /* Remove a margem padrão */
+	background-color: white;
+	padding: 40px;
+	width: 810px;
+	margin: 30px auto;
+	border-radius: 10px;
 }
 
 .task__item {
-    display: flex; /* Usa flexbox para layout */
-    justify-content: space-between; /* Espaça os itens igualmente */
-    align-items: center; /* Alinha os itens ao centro */
-    padding: 10px; /* Espaçamento interno */
-    margin-bottom: 10px; /* Espaçamento inferior */
-    background-color: #f1f3f5; /* Cor de fundo cinza claro */
-    border-radius: 5px; /* Bordas arredondadas */
+	height: 50px;
+	width: 750px;
+	background-color: #f1f3f5;
+	border: none;
+	border-radius: 7.5px;
+	font-size: 15px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .task-info__container {
-    display: flex; /* Usa flexbox para layout */
-    align-items: center; /* Alinha os itens ao centro */
-    gap: 10px; /* Espaçamento entre os itens */
+	display: flex;
+	padding: 20px;
 }
 
 .task-type {
-    width: 15px; /* Largura do indicador de prioridade */
-    height: 15px; /* Altura do indicador de prioridade */
-    border-radius: 50%; /* Forma circular */
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin-right: 10px;
 }
 
 .span-urgent {
-    background-color: #e40404; /* Cor de fundo vermelha para urgente */
+	background-color: #e40404;
 }
 
 .span-important {
-    background-color: #f3a703; /* Cor de fundo amarela para importante */
+	background-color: #f3a703;
 }
 
 .span-normal {
-    background-color: #028302; /* Cor de fundo verde para normal */
+	background-color: #028302;
 }
 
 .task__button--remove-task {
-    width: 20px; /* Largura do botão de remover */
-    height: 20px; /* Altura do botão de remover */
-    background-image: url('path-to-your-icon.svg'); /* Substitua pelo caminho do seu ícone */
-    background-size: cover; /* Ajusta o tamanho da imagem para cobrir o botão */
-    border: none; /* Remove a borda padrão */
-    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+	background-image: url("https://raw.githubusercontent.com/Kenzie-Academy-Brasil-Developers/m2-lista-de-tarefas/8331d765b661a4c027f93250026591d030792d09/assets/trash-icon.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	border: none;
+	margin-right: 10px;
 }
